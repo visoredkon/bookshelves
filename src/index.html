@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <script type="module" src="scripts/index.js"></script>
+        <title>Serie Bookshelves</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1>Serie Bookshelves</h1>
+                <ul>
+                    <li><a href="#input" class="active">Input</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#bookshelf">Bookshelf</a></li>
+                </ul>
+            </nav>
+            <img src="assets/images/serie.png" alt="" />
+        </header>
+        <main>
+            <div class="content">
+                <div id="input">
+                    <form id="input-book">
+                        <div class="input">
+                            <label for="input-book-title">Judul</label>
+                            <input id="input-book-title" type="text" required />
+                        </div>
+                        <br />
+                        <div class="input">
+                            <label for="input-book-author">Penulis</label>
+                            <input id="input-book-author" type="text" required />
+                        </div>
+                        <br />
+                        <div class="input">
+                            <label for="input-book-year">Tahun</label>
+                            <input id="input-book-year" type="number" required />
+                        </div>
+                        <br />
+                        <div class="input-in-line">
+                            <label for="input-book-is-completed">Selesai dibaca</label>
+                            <input id="input-book-is-completed" type="checkbox" />
+                        </div>
+                        <br />
+                        <button id="input-submit" type="submit">
+                            Masukkan buku ke rak <strong>belum selesai dibaca</strong>
+                        </button>
+                    </form>
+                </div>
+                <div id="search">
+                    <form id="search-book">
+                        <label for="search-book-title">Judul</label>
+                        <input id="search-book-title" type="text" />
+                        <br />
+                        <button id="search-submit" type="submit">Cari</button>
+                    </form>
+                </div>
+                <div id="bookshelf">
+                    <div id="bookshelf-section">
+                        <section class="bookshelf-list">
+                            <h2>Belum Selesai Dibaca</h2>
+
+                            <div class="book-list" id="incompleted-bookshelf-list"></div>
+                        </section>
+
+                        <section class="bookshelf-list">
+                            <h2>Selesai Dibaca</h2>
+
+                            <div class="book-list" id="completed-bookshelf-list"></div>
+                        </section>
+                    </div>
+                    <button id="search-reset" type="submit">Reset Search</button>
+                </div>
+            </div>
+        </main>
+        <footer>Made with :3</footer>
+    </body>
+</html>

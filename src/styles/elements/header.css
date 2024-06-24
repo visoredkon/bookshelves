@@ -1,0 +1,59 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 25px 35px;
+}
+
+header > nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header > nav > h1 {
+    color: var(--main-color);
+}
+
+header > nav > ul {
+    width: 100%;
+    margin: 0 2rem;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+header > nav > ul > li {
+    text-decoration: none;
+}
+
+header > nav > ul > li > a {
+    color: var(--main-text-color);
+    display: block;
+    text-align: center;
+    width: 5rem;
+    padding: 7px;
+    text-decoration: none;
+}
+
+header > nav > ul > li > a:hover {
+    color: var(--secondary-text-color);
+    box-shadow: 0 0 2px 1px var(--main-color);
+    background-color: var(--main-color);
+}
+
+header > nav > ul > li > a:active {
+    box-shadow: 0px 0px 2px 0.8px var(--main-color);
+}
+
+header > nav > ul > li > a.active {
+    color: var(--secondary-text-color);
+    background-color: var(--main-color);
+}
+
+header > img {
+    width: auto;
+    height: 6rem;
+}

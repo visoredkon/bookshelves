@@ -1,0 +1,110 @@
+main {
+    margin: 15px;
+    padding: 25px 25px;
+}
+
+main > .content > div {
+    text-align: justify;
+    position: relative;
+}
+
+main > .content > div:not(:last-child)::after {
+    content: "";
+    height: 1.1rem;
+}
+
+main > .content > div:not(:target) {
+    max-height: 0;
+    overflow: hidden;
+}
+
+main > .content > div:target {
+    max-height: 100%;
+    transition: max-height 0.3s ease-in;
+}
+
+main > .content > #input,
+main > .content > #search {
+    display: flex;
+    justify-content: center;
+}
+
+main > .content > #input > #input-book > .input label,
+main > .content > #search > #search-book > label,
+main > .content > #search > #search-book > input {
+    display: block;
+}
+
+main > .content > #input > #input-book > .input input,
+main > .content > #search > #search-book > input {
+    width: 800px;
+    height: 40px;
+}
+
+main > .content > #input > #input-book > #input-submit,
+main > .content > #search > #search-book > #search-submit {
+    width: 803px;
+    height: 40px;
+}
+
+main > .content > #bookshelf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main > .content > #bookshelf button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main > .content > #bookshelf > #search-reset {
+    margin: 20px;
+    display: none;
+}
+
+main > .content > #bookshelf > #bookshelf-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+main > .content > #bookshelf > #bookshelf-section > .bookshelf-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px 20px 50px;
+    margin: 16px 0 0 0;
+    border: 1px solid var(--main-text-color);
+    border-color: --main-color;
+    border-radius: 10px;
+    width: 500px;
+}
+
+main > .content > #bookshelf > #bookshelf-section > .bookshelf-list > .book-list > .book-item {
+    background-color: var(--main-color);
+    color: var(--secondary-text-color);
+    padding: 8px 16px 16px 16px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 400px;
+}
+
+main > .content > #bookshelf > #bookshelf-section > .bookshelf-list > .book-list > .book-item > .action {
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
+main > .content > #bookshelf > #bookshelf-section > .bookshelf-list > .book-list > .book-item > .action > .green {
+    color: var(--secondary-text-color);
+    background-color: #a6e3a1;
+}
+
+main > .content > #bookshelf > #bookshelf-section > .bookshelf-list > .book-list > .book-item > .action > .red {
+    color: var(--secondary-text-color);
+    background-color: #f38ba8;
+}
