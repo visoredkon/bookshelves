@@ -4,6 +4,10 @@
     "type": "module",
     "author": "Pahril",
     "description": "Dicoding submission",
+    "scripts": {
+        "lint": "eslint . --fix",
+        "format": "prettier . --write"
+    },
     "devDependencies": {
         "@eslint/eslintrc": "^3.1.0",
         "@eslint/js": "^9.5.0",
